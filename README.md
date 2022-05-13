@@ -8,7 +8,6 @@ This github contains the following files:
 
 For Data curator part there are two scripts:- 
 -part1_star.qsuba and multiqc.qsub
--9 bam files containing alignments for each of your samples
 
 For the programmer part:-
 -featureCounts.qsub and multiqc_feature.qsub
