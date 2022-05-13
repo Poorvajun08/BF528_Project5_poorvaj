@@ -1,0 +1,62 @@
+#!/bin/bash
+
+#$ -P bf528
+#$ -cwd
+#$ -pe omp 16
+#
+source /etc/bashrc
+
+module load gcc/8.3.0 star/2.6.0c
+
+GENOMEDIR='/project/bf528/project_3/reference/rn4_STAR'
+
+
+
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177984_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177984_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177984"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177985_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177985_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177985"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177986_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177986_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177986"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177960_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177960_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177960"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177967_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177967_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177967"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177968_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177968_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177968"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1178023_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1178023_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1178023"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1178049_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1178049_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1178049"
+
+STAR --genomeDir $GENOMEDIR --readFilesCommand zcat \
+--readFilesIn /projectnb/bf528/students/poorvaj/project5/SRR1177971_1.fastq.gz /projectnb/bf528/students/poorvaj/project5/SRR1177971_2.fastq.gz \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 --outFileNamePrefix "/projectnb/bf528/students/poorvaj/project5/part1_star/SRR1177971"
+
+
+

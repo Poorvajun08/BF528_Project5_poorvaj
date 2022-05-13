@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#$ -P bf528
+#$ -cwd
+#$ -pe omp 16
+
+source /etc/bashrc
+
+
+
+#load the module for this subq:
+module load subread/1.6.2
+
+# path to gtf annotation file, that we most use as a reference:
+GTF=/project/bf528/project_3/reference/rn4_refGene_20180308.gtf
+
+# The following command is to run on every file in our folder that ends with bam:
+for file in /projectnb/bf528/students/poorvaj/project5/bamOutput_files/*.bam
+do
+# Create a shortened filename:
+f=$(basename “$file”)
+f=${f:0:10}
+
+
+echo $f
+OUT=/projectnb/bf528/students/poorvaj/project5/featureCounts/featureCounts_output$f.txt
+featureCounts -T 16 -a $GTF -o $OUT $file
+#this las part terminates the loop
+done;
